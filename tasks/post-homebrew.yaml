@@ -1,0 +1,6 @@
+---
+- name: Run post-homebrew commands
+  ansible.builtin.command:
+    cmd: "{{ item }}"
+  tags: ['homebrew']
+  loop: "{{ post_homebrew_commands | default([]) }}"

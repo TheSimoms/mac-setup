@@ -1,0 +1,88 @@
+---
+
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_osx: true
+configure_dock: true
+
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - 'App Store'
+
+dockitems_persist:
+  - name: System Settings
+    path: "/Applications/System Settings.app/"
+  - name: Activity Monitor
+    path: "/Applications/Utilities/Activity Monitor.app/"
+  - name: iTerm
+    path: "/Applications/iTerm.app/"
+  - name: Firefox
+    path: "/Applications/Firefox.app/"
+  - name: Messenger
+    path: "/Applications/Messenger.app/"
+  - name: Slack
+    path: "/Applications/Slack.app/"
+  - name: Visual Studio Code
+    path: "/Applications/Visual Studio Code.app/"
+
+dotfiles_repo: https://github.com/TheSimoms/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_version: main
+dotfiles_files:
+  - .gitconfig
+  - .gitignore
+  - .osx
+  - .vimrc
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+
+homebrew_cask_apps:
+  - firefox
+  - slack
+  - dropbox
+  - autodesk-fusion360
+  - iterm2
+  - visual-studio-code
+  - balenaetcher
+  - gimp
+  - raspberry-pi-imager
+  - steam
+  - messenger
+  - vlc
+
+homebrew_installed_packages:
+  - git
+  - ssh-copy-id
+  - wget
+  - docker
+  - docker-compose
+  - pipx
+
+homebrew_upgrade_all_packages: true
+
+mas_installed_apps:
+  - {id: 1451470024, name: "IPTVX"}
+
+mas_uninstalled_apps:
+  - { id: 408981434, name: "iMovie" }
+  - { id: 409183694, name: "Keynote" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 682658836, name: "GarageBand" }
+
+osx_script: "~/.osx --no-restart"
+
+omz_user:
+  name: "{{ ansible_user_id }}"
+  group: "{{ ansible_user_gid }}"
+  settings: ""
+
+omz_plugins:
+  - git
+  - docker
