@@ -5,5 +5,5 @@ xcode-select --install
 sudo xcodebuild -license
 
 # Setup Ansible
-sudo pip3 install --upgrade pip
+python3 -m pip install --upgrade pip
 pip3 install --ignore-installed ansible
