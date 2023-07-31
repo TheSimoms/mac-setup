@@ -43,26 +43,32 @@ homebrew_taps:
   - homebrew/cask
 
 homebrew_cask_apps:
-  - firefox
-  - slack
-  - dropbox
+  - amethyst
   - autodesk-fusion360
-  - iterm2
-  - visual-studio-code
   - balenaetcher
+  - discord
+  - firefox
   - gimp
-  - raspberry-pi-imager
-  - steam
+  - git-credential-manager-core
+  - iterm2
+  - jetbrains-toolbox
   - messenger
+  - mattermost
+  - microsoft-teams
+  - postman
+  - rar
+  - raspberry-pi-imager
+  - slack
+  - steam
+  - visual-studio-code
   - vlc
 
 homebrew_installed_packages:
-  - git
-  - ssh-copy-id
-  - wget
   - docker
-  - docker-compose
+  - git
+  - nvm
   - pipx
+  - wget
 
 homebrew_upgrade_all_packages: true
 
